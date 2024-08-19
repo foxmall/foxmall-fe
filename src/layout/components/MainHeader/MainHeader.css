@@ -1,0 +1,37 @@
+.main-header {
+  height: 100px;
+  background-color: white;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px 0 100px;
+  align-items: center;
+}
+
+.main-header__logo {
+  flex: 1;
+}
+
+
+.main-header__logo img{
+  max-height: 50px;
+  min-height: 50px;
+}
+
+.main-header__left {
+  display: flex;
+  flex: 4;
+  height: 100%;
+  align-items: center;
+}
+
+.main-header__left-item {
+  padding: 5px 0 5px 5px;
+  margin: 5px;
+}
+
+.main-header__left-group {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}

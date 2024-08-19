@@ -1,0 +1,9 @@
+.menu {
+  display: flex;
+  margin: 10px 100px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}

@@ -1,0 +1,59 @@
+.menu-item {
+  background-color: #F3F9FB;
+  padding: 15px 15px;
+  border-radius: 20px;
+  color: grey;
+  margin-right: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+}
+
+.menu-item--active {
+  background-color: #FF8870;
+  color: white;
+}
+
+.menu-item__icon {
+  margin-left: 8px;
+}
+
+.menu-item .menu-item__icon {
+  color: lightgray;
+}
+
+.menu-item--active .menu-item__icon {
+  color: white;
+}
+
+.menu-item__dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.menu-item__dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.menu-item__dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when hovering over the dropdown button */
+.menu-item:hover .menu-item__dropdown {
+  display: block;
+}
+
+
