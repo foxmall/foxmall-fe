@@ -1,0 +1,59 @@
+.product-avatar {
+  width: 100%;
+}
+
+.product-avatar img{
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 220px;
+  min-height: 220px;
+}
+
+.product-item {
+  padding: 10px 5px;
+  min-width: 250px;
+  max-width: 250px;
+  position: relative;
+}
+
+
+.price-with-sale {
+  text-decoration: line-through;
+  color: red;
+}
+
+.product-title {
+  font-size: 18px;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+.product-info {
+  margin: 5px 15px;
+}
+
+
+.save-rate {
+  padding: 5px 0;
+}
+
+.price {
+  padding: 5px 0;
+}
+
+.sale-price strong {
+  font-size: 16px;
+}
+
+.percent-off {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 25px;
+  background-color: #008ECC;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+}

@@ -30,10 +30,6 @@ const Menu = () => {
             active={false}
         />
         <MenuItem
-            title={'Mẹ và bé'}
-            active={false}
-        />
-        <MenuItem
             title={'Thời trang nam'}
             active={false}
         />
@@ -42,12 +38,8 @@ const Menu = () => {
             active={false}
         />
         <MenuItem
-            title={'Thiết bị văn phòng'}
+            title={'Khác'}
             active={false}
-        />
-        <MenuItem
-            title={'Đồ gia dụng'}
-            active={true}
         />
       </div>
   )

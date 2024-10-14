@@ -1,0 +1,9 @@
+.top-categories {
+  margin-top: 20px;
+}
+
+.top-categories__bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

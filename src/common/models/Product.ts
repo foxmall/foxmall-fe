@@ -1,4 +1,4 @@
-export type ProductItem = {
+export type ProductItemModel = {
   title: string,
   price: number,
   salePrice: number,

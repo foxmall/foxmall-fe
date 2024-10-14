@@ -8,15 +8,16 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
-import {ProductItem} from "../../../../common/models/Product";
+import {ProductItemModel} from "../../../../common/models/Product";
+import ProductItem from "../../../../common/components/ProductItem/ProductItem";
 
 type BestDealProps = {
-  products: ProductItem[]
+  products: ProductItemModel[]
 }
 
 const BestDeal = ({products}: BestDealProps) => {
   return (
-      <>
+      <div className={"best-deals"}>
         <h2>Best Deal</h2>
         <Swiper
             loop={true}
@@ -24,8 +25,8 @@ const BestDeal = ({products}: BestDealProps) => {
               delay: 3000
             }}
             speed={1200}
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={4}
+            spaceBetween={5}
             // pagination={{
             //   clickable: true,
             // }}
@@ -33,34 +34,34 @@ const BestDeal = ({products}: BestDealProps) => {
             className="bestDealsSwipper"
         >
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://cdn.tgdd.vn/Products/Images/42/326016/vivo-y28-vang-thumb-600x600.jpg" alt=""/>
+            <ProductItem></ProductItem>
           </SwiperSlide>
         </Swiper>
-      </>
+      </div>
   )
 }
 

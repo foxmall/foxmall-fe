@@ -1,5 +1,7 @@
 import './HomePage.css'
 import BestDeal from "./components/BestDeal/BestDeal";
+import TopCategories from "./components/TopCategories/TopCategories";
+import TopElectronicBrand from "./components/TopElectronicBrands/TopElectronicBrand";
 
 const HomePage = () => {
   return (
@@ -7,6 +9,8 @@ const HomePage = () => {
         <BestDeal
             products={[]}
         />
+        <TopCategories/>
+        <TopElectronicBrand/>
       </div>
   )
 }
