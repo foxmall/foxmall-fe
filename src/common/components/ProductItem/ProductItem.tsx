@@ -13,7 +13,7 @@ const ProductItem = () => {
                  alt=""/>
           </div>
           <div className={"product-info"}>
-            <RatingBar rating={4}/>
+            {/*<RatingBar rating={4}/>*/}
             <div className={"product-title"}>
               <a href="">
                 Xiaomi Redmi 12

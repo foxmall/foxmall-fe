@@ -6,22 +6,24 @@ import SearchBar from "./components/SearchBar";
 import EnvConfigVariable from "../../../common/env/EnvConfigVariable";
 import Oauth2Util from "../../../common/util/Oauth2Util";
 import pkceChallenge from "pkce-challenge";
-import {UserContextType} from "../../../common/context/UserContext/UserContextProvider";
+import {
+  UserContextProviderType,
+  UserContextType
+} from "../../../common/context/UserContext/UserContextProvider";
 import UserContext from "../../../common/context/UserContext/UserContext";
 import {useContext, useEffect, useState} from "react";
 
 
 const MainHeader = () => {
-  const userCtx = useContext<UserContextType | null>(UserContext);
+  const userCtx = useContext<UserContextProviderType>(UserContext);
 
   const [username, setUsername] = useState<string|null>( null);
 
   useEffect(() => {
-    if(!userCtx){
-      return;
+    if(userCtx.user){
+      setUsername(userCtx.user.username);
     }
-    setUsername(userCtx.username);
-  }, []);
+  }, [userCtx.user]);
 
   const handleLoginClick: () => void = () => {
     pkceChallenge().then(result => {

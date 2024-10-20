@@ -3,10 +3,11 @@ import axios, {
   AxiosResponse,
   InternalAxiosRequestConfig
 } from 'axios';
+import EnvConfigVariable from "../../env/EnvConfigVariable";
 
 // Step 3: Create Axios instance with common configuration
 const authAxiosClient: AxiosInstance = axios.create({
-  baseURL: 'https://api.example.com', // Base URL for all requests
+  baseURL: EnvConfigVariable.API_BACKEND_URI, // Base URL for all requests
   timeout: 5000, // Timeout after 5 seconds
   headers: {
     'Content-Type': 'application/json',
@@ -32,7 +33,7 @@ authAxiosClient.interceptors.request.use(
     }
 );
 
-// Step 5: Response interceptor
+// // Step 5: Response interceptor
 authAxiosClient.interceptors.response.use(
     (response: AxiosResponse) => {
       console.log('Response Received:', response); // Log response for debugging
@@ -41,8 +42,8 @@ authAxiosClient.interceptors.response.use(
     (error) => {
       // Handle response errors (e.g., token expiry, server errors)
       if (error.response?.status === 401) {
-        console.warn('Unauthorized! Redirecting to login...');
-        // Optionally, redirect to login page
+        localStorage.removeItem("access_token");
+        window.location.href = '/';
       }
       console.error('Response Error:', error);
       return Promise.reject(error);
