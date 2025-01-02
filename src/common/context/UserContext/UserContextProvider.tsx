@@ -1,6 +1,6 @@
 import UserContext from "./UserContext";
 import React, {ReactNode, useEffect, useState} from "react";
-import {meAPI, MeResponse} from "../../api/auth/userService";
+import {meAPI, MeApiResponse} from "../../api/auth/userService";
 
 export type UserContextType = {
   username: string
@@ -22,12 +22,8 @@ const UserContextProvider: React.FC<UserContextProviderProps>  = ({children}) =>
     if(!accessToken){
       return;
     }
-    meAPI().then((res: MeResponse | null) => {
-      if(res){
-        setUser({
-          username: res.data.username
-        })
-      }
+    meAPI().then((res) => {
+      res?.data?.username && setUser({ username: res.data.username });
     })
     .catch(err => {
       console.error(err);
